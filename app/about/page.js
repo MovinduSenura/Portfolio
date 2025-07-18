@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { CircleAlert } from "lucide-react";
+import { CircleAlert, ArrowLeftCircle } from "lucide-react";
 
 const Baumans = localFont({
   src: "../fonts/Baumans-Regular.ttf",
@@ -80,6 +80,32 @@ const RainEffect = () => {
 
 export default function RainPortfolio() {
   const router = useRouter();
+  const [currentPage, setCurrentPage] = useState("");
+
+  // Define the navigation flow
+  const pageFlow = {
+    back: {
+      "about": "/"
+    }
+  };
+
+    // Get current page from window location
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    if (pathname) {
+      // Extract page name from pathname
+      const pageName = pathname.replace("/", "");
+      setCurrentPage(pageName);
+    }
+  }, []);
+
+  const handleBack = () => {
+    const backPage = pageFlow.back[currentPage];
+    if (backPage) {
+      window.location = `${backPage}`;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-800 via-gray-950 to-gray-1000 text-white relative overflow-hidden">
       <RainEffect />
@@ -89,16 +115,22 @@ export default function RainPortfolio() {
       <div className="relative z-10 container mx-auto px-6 py-12">
         {/* About Section */}
         <section className="mb-16 max-w-4xl mx-auto">
-          <div className="bg-transparent bg-opacity-50 backdrop-blur-md rounded-lg p-8 border border-gray-800">
+          <div className="bg-transparent bg-opacity-50 backdrop-blur-md rounded-lg p-8 border border-gray-800 hover:scale-105 transition-transform duration-300">
+            <ArrowLeftCircle size={24} onClick={handleBack} className="cursor-pointer md:hidden mb-5" />
             <div className="flex flex-col items-start gap-8">
-              <div className="flex justify-center">
-                <Image
-                  src="/me2.webp"
-                  alt="Me"
-                  width={400}
-                  height={400}
-                  className="rounded-lg"
-                />
+              <div className="flex justify-between w-full">
+                <div>
+                  <Image
+                    src="/me2.webp"
+                    alt="Me"
+                    width={400}
+                    height={400}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div>
+                  <ArrowLeftCircle size={24} onClick={handleBack} className="cursor-pointer hidden md:block" />
+                </div>
               </div>
               <div>
                 <div className="flex items-center gap-2">
@@ -122,20 +154,24 @@ export default function RainPortfolio() {
                   CORE EXPERTISE
                 </p>
                 <p className="text-blue-100 leading-relaxed md:text-lg text-md text-justify font-normal mb-2">
-                  <clr className="text-amber-400 font-bold">Full-Stack Development:</clr>{" "}
+                  <clr className="text-amber-400 font-bold">
+                    Full-Stack Development:
+                  </clr>{" "}
                   Building complete web applications using modern technologies
                   like React, Vite, Next.js, and the MERN stack, with experience
                   in cloud databases including Supabase and Firebase for
                   scalable backend solutions.
                 </p>
                 <p className="text-blue-100 leading-relaxed md:text-lg text-md text-justify font-normal mb-2">
-                  <clr className="text-amber-400 font-bold">UI/UX Design:</clr> Creating
-                  user-centered designs that balance aesthetics with
+                  <clr className="text-amber-400 font-bold">UI/UX Design:</clr>{" "}
+                  Creating user-centered designs that balance aesthetics with
                   functionality, ensuring seamless user experiences across web
                   and mobile platforms.
                 </p>
                 <p className="text-blue-100 leading-relaxed md:text-lg text-md text-justify font-normal">
-                  <clr className="text-amber-400 font-bold">Problem-Solving:</clr>{" "}
+                  <clr className="text-amber-400 font-bold">
+                    Problem-Solving:
+                  </clr>{" "}
                   Approaching complex technical challenges with analytical
                   thinking and creative solutions, always eager to learn and
                   implement new technologies.
