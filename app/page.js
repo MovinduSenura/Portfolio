@@ -123,10 +123,14 @@ export default function RainPortfolio() {
             <Github size={20} />
             Go to GitHub
           </a>
-          <button className="bg-transparent bg-opacity-50 backdrop-blur-md hover:scale-105 transition-transform border border-gray-800 text-white font-medium py-3 px-6 rounded-lg duration-300 flex items-center gap-2 cursor-pointer">
+          <a
+            href="/Senura_Aluthge_CV.pdf"
+            download="Senura_Aluthge_CV.pdf"
+            className="bg-transparent bg-opacity-50 backdrop-blur-md hover:scale-105 transition-transform border border-gray-800 text-white font-medium py-3 px-6 rounded-lg duration-300 flex items-center gap-2 cursor-pointer inline-flex"
+          >
             <Download size={20} />
             Download CV
-          </button>
+          </a>
         </div>
 
         {/* About Section */}
@@ -344,7 +348,7 @@ export default function RainPortfolio() {
           <div className="bg-transparent bg-opacity-50 backdrop-blur-sm rounded-lg p-2">
             <h2 className="text-md font-normal text-blue-100">
               © 2025 Senura Aluthge. All Rights Reserved.
-            </h2>           
+            </h2>
           </div>
         </section>
       </div>
