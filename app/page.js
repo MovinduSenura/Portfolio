@@ -236,6 +236,20 @@ export default function RainPortfolio() {
                 image: "/login.webp",
               },
               {
+                title: "Sinhala-English Language Converter",
+                description:
+                  "This group project enables English to Sinhala and Sinhala to English translation. My contribution focused on translation history management, saved translations, and history report generation. I also implemented the user sign-up and authentication system to manage user accounts.",
+                tech: "React, Vite, JavaScript, Node.js, Express.js, Tailwind CSS, MongoDB",
+                image: "/translator.webp",
+              },
+              {
+                title: "Food Delivery System",
+                description:
+                  "In this project, I had to implement the frontend and auth service. In auth service, there are 4 roles: customer, restaurant, delivery person and admin. Then according to the role, they will redirect to their respective dashboards. If a normal user becomes a restaurant owner or a delivery person, the role changes.",
+                tech: "React, Vite, JavaScript, Node.js, Express.js, Tailwind CSS, MongoDB, Microservices, Docker, Kubernetes",
+                image: "/delivery.webp",
+              },
+              {
                 title: "W - A - S - D",
                 description:
                   "This is a PC only game where a music plays and when particular key icon comes to a certain area, user needs to press the exact key or game over.",
