@@ -222,6 +222,20 @@ export default function RainPortfolio() {
               //   image: "/simpleguys.webp",
               // },
               {
+                title: "Hemora - AI-Powered Blood Disease Detection System",
+                description:
+                  "Contributed to Hemora, an AI-powered diagnostic web application for blood disorder analysis, by developing the Detection and Identification of Acute Lymphoblastic Leukemia (ALL) component using YOLOv8s and EfficientNetB0 for blood smear image analysis.",
+                tech: "React, Python, Django, YOLOv8s, EfficientNetB0, PostgreSQL, Docker",
+                image: "/blood.webp",
+              },
+              {
+                title: "UniLib - A Microservices-Based Library Management System",
+                description:
+                  "This project was a group project where I was responsible for the book catalog service. Its job is to store book details, search books, add new books, update existing books, delete books and update availability when borrowing/returning happens.",
+                tech: "React, Node.js, Express.js, SonarCloud, MongoDB, Azure, Docker",
+                image: "/book.webp",
+              },
+              {
                 title: "Cafe Management System",
                 description:
                   "This project was a group project where I was responsible for the menu management function. It allows users to add, update, and delete menu items. My special feature was to highlight the most ordered item in the menu.",
