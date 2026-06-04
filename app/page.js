@@ -361,7 +361,7 @@ export default function RainPortfolio() {
         <section className="max-w-fit mx-auto text-center">
           <div className="bg-transparent bg-opacity-50 backdrop-blur-sm rounded-lg p-2">
             <h2 className="text-md font-normal text-blue-100">
-              © 2025 Senura Aluthge. All Rights Reserved.
+              © 2026 Senura Aluthge. All Rights Reserved.
             </h2>
           </div>
         </section>
